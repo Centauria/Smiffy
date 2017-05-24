@@ -20,11 +20,11 @@ def draw(bot, contact, member, cmd):
 
 def dc():
     prob=random.randint(0, 100);
-    if prob<1:
+    if prob<10:
         result='UR';
-    elif prob<5:
+    elif prob<30:
         result='SSR';
-    elif prob<20:
+    elif prob<60:
         result='SR';
     else:
         result='R';
@@ -40,7 +40,7 @@ def sl():
 
 def fjp():
     prob=random.randint(0, 100);
-    if prob<20:
+    if prob<50:
         result='UR';
     else:
         result='SR';
@@ -48,9 +48,9 @@ def fjp():
 
 def hcp():
     prob=random.randint(0, 100);
-    if prob<10:
+    if prob<30:
         result='UR';
-    elif prob<30:
+    elif prob<60:
         result='SSR';
     else:
         result='SR';
