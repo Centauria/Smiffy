@@ -14,17 +14,17 @@ def draw(bot, contact, member, cmd):
 	global CMD;
 	if cmd in CMD:
 		if cmd=='dc':
-			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+dc());
+			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+dc(),resendOn1202=false);
 		elif cmd=='sl':
-			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+sl());
+			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+sl(),resendOn1202=false);
 		elif cmd=='fjp':
-			bot.SendTo(contact,'@'+member.name+'的'+cmd+'结果：\n'+fjp());
+			bot.SendTo(contact,'@'+member.name+'的'+cmd+'结果：\n'+fjp(),resendOn1202=false);
 		elif cmd=='hcp':
-			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+hcp());
+			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+hcp(),resendOn1202=false);
 		elif cmd=='bhq':
-			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+dc());
+			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+dc(),resendOn1202=false);
 		elif cmd=='ssjp':
-			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+ssjp());
+			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+ssjp(),resendOn1202=false);
 		elif cmd=='ssws':
 			ssws();
 
