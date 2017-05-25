@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 import random;
 
-CMD=['dc', 'sl', 'fjp', 'hcp'];
-wsss=0;
+global CMD;
+CMD=['dc', 'sl', 'fjp', 'hcp', 'ssjp', 'ssws'];
+global WSSS;
+WSSS=0;
 
 def onQQMessage(bot, contact, member, content):
 	if contact.ctype=='group' and contact.qq=='572661635':
 		draw(bot, contact, member, content);
 
 def draw(bot, contact, member, cmd):
+	global CMD;
 	if cmd in CMD:
 		if cmd=='dc':
 			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+dc());
@@ -24,8 +27,9 @@ def draw(bot, contact, member, cmd):
 			ssws();
 
 def dc():
+	global WSSS;
 	prob=random.randint(0, 100);
-	if wsss>0:
+	if WSSS>0:
 		if prob<10:
 			result='UR';
 		elif prob<30:
@@ -34,7 +38,7 @@ def dc():
 			result='SR';
 		else:
 			result='R';
-		wsss-=1;
+		WSSS-=1;
 	else:
 		if prob<1:
 			result='UR';
@@ -55,13 +59,14 @@ def sl():
 	return result;
 
 def fjp():
+	global WSSS;
 	prob=random.randint(0, 100);
-	if wsss>0:
+	if WSSS>0:
 		if prob<50:
 			result='UR';
 		else:
 			result='SR';
-		wsss-=1;
+		WSSS-=1;
 	else:
 		if prob<20:
 			result='UR';
@@ -70,15 +75,16 @@ def fjp():
 	return result;
 
 def hcp():
+	global WSSS;
 	prob=random.randint(0, 100);
-	if wsss>0:
+	if WSSS>0:
 		if prob<30:
 			result='UR';
 		elif prob<60:
 			result='SSR';
 		else:
 			result='SR';
-		wsss-=1;
+		WSSS-=1;
 	else:
 		if prob<10:
 			result='UR';
@@ -89,15 +95,16 @@ def hcp():
 	return result;
 
 def ssjp():
+	global WSSS;
 	prob=random.randint(0, 100);
-	if wsss>0:
+	if WSSS>0:
 		if prob<30:
 			result='UR';
 		elif prob<60:
 			result='SR';
 		else:
 			result='R';
-		wsss-=1;
+		WSSS-=1;
 	else:
 		if prob<10:
 			result='UR';
@@ -108,4 +115,5 @@ def ssjp():
 	return result;
 
 def ssws():
-	wsss=random.randint(1, 55);
+	global WSSS;
+	WSSS=random.randint(1, 55);
