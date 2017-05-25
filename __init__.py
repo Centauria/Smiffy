@@ -2,7 +2,7 @@
 import random;
 
 global CMD;
-CMD=['dc', 'sl', 'fjp', 'hcp', 'ssjp', 'ssws'];
+CMD=['dc', 'sl', 'fjp', 'hcp', 'bhq','ssjp', 'ssws'];
 global WSSS;
 WSSS=0;
 
@@ -21,6 +21,8 @@ def draw(bot, contact, member, cmd):
 			bot.SendTo(contact,'@'+member.name+'的'+cmd+'结果：\n'+fjp());
 		elif cmd=='hcp':
 			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+hcp());
+		elif cmd=='bhq':
+			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+dc());
 		elif cmd=='ssjp':
 			bot.SendTo(contact, '@'+member.name+'的'+cmd+'结果：\n'+ssjp());
 		elif cmd=='ssws':
